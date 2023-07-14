@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     breed: DataTypes.STRING,
     markings: DataTypes.STRING,
-    lastfed: DataTypes.DATE,
+    date: DataTypes.DATE,
   };
 
   return sequelize.define("Cat", schema);

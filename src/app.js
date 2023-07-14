@@ -1,11 +1,11 @@
 const express = require("express");
-
+const { Cat } = require("./models/cats");
 const app = express();
 
 app.use(express.json());
 
 app.post("/cats", (req, res) => {
-  return res.status(201).json({ result: req.body });
+  Cat.create(req.body).then((cat) => res.status(201).json(cat));
 });
 
 module.exports = app;
